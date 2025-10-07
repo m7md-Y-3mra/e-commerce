@@ -1,5 +1,6 @@
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Button } from "../ui/button";
 import Cart from "./assets/images/cart.svg";
 import Profile from "./assets/images/profile.svg";
 import Wishlist from "./assets/images/wishlist.svg";
@@ -38,12 +39,26 @@ const Header = () => {
             </NavIcon>
 
             {/* Mobile Menu Button */}
-            <button
+            {/* <button
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <Menu className="w-6 h-6" />
-            </button>
+            </button> */}
+            {/* Mobile menu button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+              <span className="sr-only">Toggle menu</span>
+            </Button>
           </div>
         </div>
 
