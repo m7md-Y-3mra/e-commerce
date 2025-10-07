@@ -38,14 +38,6 @@ const Header = () => {
               <img src={Profile} alt="profile-icon" />
             </NavIcon>
 
-            {/* Mobile Menu Button */}
-            {/* <button
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <Menu className="w-6 h-6" />
-            </button> */}
-            {/* Mobile menu button */}
             <Button
               variant="ghost"
               size="icon"
