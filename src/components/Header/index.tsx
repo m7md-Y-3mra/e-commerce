@@ -1,5 +1,8 @@
-import { Heart, Menu, ShoppingCart, User } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
+import Cart from "./assets/images/cart.svg";
+import Profile from "./assets/images/profile.svg";
+import Wishlist from "./assets/images/wishlist.svg";
 import Navbar from "./components/Navbar";
 import NavIcon from "./components/NavIcon";
 import { NavIconWithBadge } from "./components/NavIconWithBadge";
@@ -25,13 +28,13 @@ const Header = () => {
 
             {/* Icons */}
             <NavIconWithBadge count={2}>
-              <Heart className="w-6 h-6" />
+              <img src={Wishlist} alt="wishlist-icon" />
             </NavIconWithBadge>
             <NavIconWithBadge count={2}>
-              <ShoppingCart className="w-6 h-6" />
+              <img src={Cart} alt="cart-icon" />
             </NavIconWithBadge>
             <NavIcon>
-              <User className="w-6 h-6" />
+              <img src={Profile} alt="profile-icon" />
             </NavIcon>
 
             {/* Mobile Menu Button */}

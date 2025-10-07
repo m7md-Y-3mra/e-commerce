@@ -4,13 +4,13 @@ import type { NavLinkProps } from "./types";
 
 const NavLink: FC<NavLinkProps> = ({ to, label, type }) => {
   const location = useLocation();
-  console.log({ location: location.pathname, to });
   const style =
     type === "desktop"
       ? `hover:text-gray-600 border-b-2 border-transparent transition ${
           location.pathname === to && "border-gray-300!"
         }`
       : `transition ${location.pathname === to && "text-primary"}`;
+
   return (
     <Link to={to} className={style}>
       {label}
