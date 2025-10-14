@@ -1,3 +1,4 @@
+import BestSelling from "./components/BestSelling";
 import Categories from "./components/Categories";
 import FlashSales from "./components/FlashSales";
 import HeroBanner from "./components/HeroBanner";
@@ -9,6 +10,7 @@ const Home = () => {
         <HeroBanner />
         <FlashSales />
         <Categories />
+        <BestSelling />
       </main>
     </div>
   );
