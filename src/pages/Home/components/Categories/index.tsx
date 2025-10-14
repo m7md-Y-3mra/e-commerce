@@ -5,7 +5,7 @@ import type { CategoriesProps } from "./types";
 import { useCategories } from "./useCategories";
 
 export default function Categories({ className = "" }: CategoriesProps) {
-  const { activeCategory, handleCategoryClick, scrollLeft, scrollRight } = useCategories();
+  const { activeCategory, handleCategoryClick } = useCategories();
 
   return (
     <section className={`container mx-auto px-4 py-12 border-b ${className}`}>

@@ -7,18 +7,8 @@ export const useCategories = () => {
     setActiveCategory(categoryId);
   };
 
-  const scrollLeft = () => {
-    console.log("Scroll left");
-  };
-
-  const scrollRight = () => {
-    console.log("Scroll right");
-  };
-
   return {
     activeCategory,
     handleCategoryClick,
-    scrollLeft,
-    scrollRight,
   };
 };
