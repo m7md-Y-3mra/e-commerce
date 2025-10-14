@@ -1,4 +1,4 @@
-import HomeSectionHeaderProps from "@/components/HomeSectionHeader";
+import HomeSectionHeader from "@/components/HomeSectionHeader";
 import NavigationArrows from "@/components/NavigationArrows";
 import ProductCard from "@/components/ProductCard";
 import SectionButton from "@/components/SectionButton";
@@ -12,7 +12,7 @@ export default function FlashSales({ className = "" }: FlashSalesProps) {
   return (
     <section className={`container mx-auto px-4 py-12 ${className}`}>
       {/* Header */}
-      <HomeSectionHeaderProps sectionLabel={SECTION_LABEL} />
+      <HomeSectionHeader sectionLabel={SECTION_LABEL} />
 
       {/* Title and Timer */}
       <div className="flex items-end justify-between mb-8">
