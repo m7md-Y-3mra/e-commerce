@@ -1,3 +1,4 @@
+import Categories from "./components/Categories";
 import FlashSales from "./components/FlashSales";
 import HeroBanner from "./components/HeroBanner";
 
@@ -7,6 +8,7 @@ const Home = () => {
       <main className="flex-1">
         <HeroBanner />
         <FlashSales />
+        <Categories />
       </main>
     </div>
   );
