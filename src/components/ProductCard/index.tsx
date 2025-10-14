@@ -25,7 +25,7 @@ const ProductCard: FC<{ product: Product }> = ({ product }) => {
         </div>
 
         {/* Add to Cart Button */}
-        <div className="absolute inset-x-0 bottom-0 translate-y-full transition-transform group-hover:translate-y-0">
+        <div className="absolute z-10 inset-x-0 bottom-0 translate-y-full transition-transform group-hover:translate-y-0">
           <Button className="w-full rounded-none rounded-b-lg bg-black  hover:bg-black hover:opacity-80">Add To Cart</Button>
         </div>
 
@@ -44,7 +44,7 @@ const ProductCard: FC<{ product: Product }> = ({ product }) => {
 
       <div className="flex items-center gap-3 mb-2">
         <span className="text-primary font-semibold">${product.price}</span>
-        {product.originalPrice > 0 && (
+        {(product?.originalPrice || 0) > 0 && (
           <span className="text-gray-400 line-through">${product.originalPrice}</span>
         )}
       </div>
