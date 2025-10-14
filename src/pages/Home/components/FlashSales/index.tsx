@@ -10,7 +10,7 @@ import type { FlashSalesProps } from "./types";
 export default function FlashSales({ className = "" }: FlashSalesProps) {
 
   return (
-    <section className={`container mx-auto px-4 py-12 ${className}`}>
+    <section className={`container mx-auto px-4 py-12  border-b ${className}`}>
       {/* Header */}
       <HomeSectionHeader sectionLabel={SECTION_LABEL} />
 
