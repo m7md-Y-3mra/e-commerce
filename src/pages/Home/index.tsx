@@ -1,5 +1,6 @@
 import BestSelling from "./components/BestSelling";
 import Categories from "./components/Categories";
+import ExploreProducts from "./components/ExploreProducts";
 import FlashSales from "./components/FlashSales";
 import HeroBanner from "./components/HeroBanner";
 import MusicBanner from "./components/MusicBanner";
@@ -13,6 +14,7 @@ const Home = () => {
         <Categories />
         <BestSelling />
         <MusicBanner />
+        <ExploreProducts />
       </main>
     </div>
   );
