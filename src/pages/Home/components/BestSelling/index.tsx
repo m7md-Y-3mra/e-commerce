@@ -6,7 +6,6 @@ import { BEST_SELLING_PRODUCTS, SECTION_LABEL, SECTION_TITLE, VIEW_ALL_TEXT } fr
 import type { BestSellingProps } from "./types";
 
 export default function BestSelling({ className = "" }: BestSellingProps) {
-
   return (
     <section className={`container mx-auto px-4 py-12 ${className}`}>
       {/* Header */}
@@ -21,7 +20,7 @@ export default function BestSelling({ className = "" }: BestSellingProps) {
       {/* Products Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {BEST_SELLING_PRODUCTS.map((product) => (
-         <ProductCard product={product} /> 
+          <ProductCard product={product} />
         ))}
       </div>
     </section>

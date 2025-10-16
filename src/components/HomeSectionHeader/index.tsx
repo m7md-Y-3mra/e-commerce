@@ -7,7 +7,7 @@ const HomeSectionHeader: FC<HomeSectionHeaderProps> = ({ sectionLabel }) => {
       <div className="w-5 h-10 bg-primary rounded"></div>
       <h3 className="text-primary font-semibold">{sectionLabel}</h3>
     </div>
-  )
-}
+  );
+};
 
 export default HomeSectionHeader;

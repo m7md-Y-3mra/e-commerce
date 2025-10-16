@@ -21,7 +21,7 @@ export const BEST_SELLING_PRODUCTS: Product[] = [
     originalPrice: 1160,
     rating: 4.5,
     reviews: 65,
-    image: Bag
+    image: Bag,
   },
   {
     id: 3,

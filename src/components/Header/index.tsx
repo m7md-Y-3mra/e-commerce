@@ -44,11 +44,7 @@ const Header = () => {
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
+              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               <span className="sr-only">Toggle menu</span>
             </Button>
           </div>
@@ -56,10 +52,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <Navbar
-            style="md:hidden mt-4 pb-4 flex flex-col gap-4 text-center"
-            type="mobile"
-          />
+          <Navbar style="md:hidden mt-4 pb-4 flex flex-col gap-4 text-center" type="mobile" />
         )}
       </div>
     </header>

@@ -14,15 +14,17 @@ export const useHeroCarousel = () => {
     });
 
     const timer = setInterval(() => {
-      const nextSlide = (api.selectedScrollSnap() + 1) % slides.length
+      const nextSlide = (api.selectedScrollSnap() + 1) % slides.length;
       setCurrent(nextSlide);
-      api?.scrollTo(nextSlide)
+      api?.scrollTo(nextSlide);
     }, 5000);
 
     return () => clearInterval(timer);
   }, [api, current]);
 
   return {
-    current, api, setApi
-  }
-}
+    current,
+    api,
+    setApi,
+  };
+};

@@ -33,5 +33,5 @@ export const useTimer = () => {
     return () => clearInterval(timer);
   }, []);
 
-  return { countdown }
-}
+  return { countdown };
+};

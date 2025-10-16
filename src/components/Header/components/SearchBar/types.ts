@@ -1,3 +1,3 @@
 export interface SearchBarProps {
-  style: string
+  style: string;
 }

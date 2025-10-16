@@ -1,4 +1,4 @@
 export interface NavbarProps {
-  style: string,
-  type: "mobile" | "desktop"
+  style: string;
+  type: "mobile" | "desktop";
 }

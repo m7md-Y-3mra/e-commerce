@@ -1,5 +1,5 @@
 export interface CarouselNavigationButtonProps {
-    direction: "prev" | "next";
-    onClick: () => void;
-    disabled: boolean;
+  direction: "prev" | "next";
+  onClick: () => void;
+  disabled: boolean;
 }

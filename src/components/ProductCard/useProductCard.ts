@@ -10,7 +10,7 @@ export function useProductCard(product: Product) {
   // Color options (when the image is a map of color -> src)
   const colors = useMemo<string[]>(
     () => (typeof product.image === "object" ? Object.keys(product.image) : []),
-    [product.image]
+    [product.image],
   );
 
   // Active color
@@ -32,13 +32,13 @@ export function useProductCard(product: Product) {
   // Star fractions for each of 5 stars (supports halves/partials)
   const perStarValues = useMemo<number[]>(
     () => Array.from({ length: 5 }, (_, i) => clamp01((product?.rating ?? 0) - i)),
-    [product?.rating]
+    [product?.rating],
   );
 
   // Pricing helpers
   const hasOriginalPrice = useMemo(
     () => (product?.originalPrice ?? 0) > 0,
-    [product?.originalPrice]
+    [product?.originalPrice],
   );
 
   return {

@@ -6,8 +6,6 @@ import Headphone from "./assets/Category-Headphone.svg";
 import Watch from "./assets/Category-SmartWatch.svg";
 import type { Category } from "./types";
 
-
-
 export const CATEGORIES: Category[] = [
   { id: 1, name: "Phones", icon: Phone },
   { id: 2, name: "Computers", icon: Computer },

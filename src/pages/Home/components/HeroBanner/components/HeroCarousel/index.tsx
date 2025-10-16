@@ -15,7 +15,10 @@ const HeroCarousel = () => {
         <Carousel setApi={setApi}>
           <CarouselContent className="pl-4 sm:pl-8 md:pl-16 lg:pl-[64px]">
             {slides.map((slide) => (
-              <CarouselItem key={slide.id} className="pl-0 flex h-full items-center justify-between px-8 md:px-12 lg:px-16">
+              <CarouselItem
+                key={slide.id}
+                className="pl-0 flex h-full items-center justify-between px-8 md:px-12 lg:px-16"
+              >
                 <div className="max-w-md space-y-4 md:space-y-6 text-background">
                   <div className="flex items-center gap-4">
                     <img src={AppleLogo} alt="apple-logo" />

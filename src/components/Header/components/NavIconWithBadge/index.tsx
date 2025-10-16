@@ -2,10 +2,7 @@ import type { FC } from "react";
 import NavIcon from "../NavIcon";
 import type { NavIconWithBadgeProps } from "./types";
 
-export const NavIconWithBadge: FC<NavIconWithBadgeProps> = ({
-  count,
-  children,
-}) => {
+export const NavIconWithBadge: FC<NavIconWithBadgeProps> = ({ count, children }) => {
   return (
     <NavIcon>
       {children}

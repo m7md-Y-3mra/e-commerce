@@ -8,7 +8,6 @@ import { FLASH_SALES_PRODUCTS, SECTION_LABEL, SECTION_TITLE, VIEW_ALL_TEXT } fro
 import type { FlashSalesProps } from "./types";
 
 export default function FlashSales({ className = "" }: FlashSalesProps) {
-
   return (
     <section className={`container mx-auto px-4 py-12  border-b ${className}`}>
       {/* Header */}

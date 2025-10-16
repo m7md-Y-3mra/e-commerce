@@ -7,12 +7,7 @@ const Navbar: FC<NavbarProps> = ({ style, type }) => {
   return (
     <nav className={style}>
       {navItems.map((item) => (
-        <NavLink
-          key={item.href}
-          to={item.href}
-          label={item.label}
-          type={type}
-        />
+        <NavLink key={item.href} to={item.href} label={item.label} type={type} />
       ))}
     </nav>
   );

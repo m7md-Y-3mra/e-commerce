@@ -1,3 +1,3 @@
 export interface HomeSectionHeaderProps {
-  sectionLabel: string
+  sectionLabel: string;
 }
