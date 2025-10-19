@@ -5,6 +5,7 @@ import FlashSales from "./components/FlashSales";
 import HeroBanner from "./components/HeroBanner";
 import MusicBanner from "./components/MusicBanner";
 import NewArrival from "./components/NewArrival";
+import ServiceFeatures from "./components/ServiceFeatures";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <MusicBanner />
         <ExploreProducts />
         <NewArrival />
+        <ServiceFeatures />
       </main>
     </div>
   );
