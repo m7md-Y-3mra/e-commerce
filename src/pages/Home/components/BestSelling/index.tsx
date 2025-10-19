@@ -20,7 +20,7 @@ export default function BestSelling({ className = "" }: BestSellingProps) {
       {/* Products Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {BEST_SELLING_PRODUCTS.map((product) => (
-          <ProductCard product={product} />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </section>
