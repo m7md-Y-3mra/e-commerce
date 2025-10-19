@@ -4,6 +4,7 @@ import ExploreProducts from "./components/ExploreProducts";
 import FlashSales from "./components/FlashSales";
 import HeroBanner from "./components/HeroBanner";
 import MusicBanner from "./components/MusicBanner";
+import NewArrival from "./components/NewArrival";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <BestSelling />
         <MusicBanner />
         <ExploreProducts />
+        <NewArrival />
       </main>
     </div>
   );
