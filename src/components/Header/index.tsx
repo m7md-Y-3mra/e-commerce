@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import Cart from "./assets/images/cart.svg";
 import Profile from "./assets/images/profile.svg";
-import Wishlist from "./assets/images/wishlist.svg";
+import Wishlist from "@/assets/wishlist.svg";
 import Navbar from "./components/Navbar";
 import NavIcon from "./components/NavIcon";
 import { NavIconWithBadge } from "./components/NavIconWithBadge";
