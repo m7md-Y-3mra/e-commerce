@@ -1,11 +1,17 @@
 import { Eye, Heart } from "lucide-react";
 import { type FC } from "react";
+import { useNavigate } from "react-router";
 import StarIcon from "../StarIcon";
 import { Button } from "../ui/button";
 import type { ProductCardProps } from "./types";
 import { useProductCard } from "./useProductCard";
 
-const ProductCard: FC<ProductCardProps> = ({ product, isPriceNextToStar = false }) => {
+const ProductCard: FC<ProductCardProps> = ({
+  product,
+  isPriceNextToStar = false,
+  enableNavigation = true,
+}) => {
+  const navigate = useNavigate();
   const {
     discount,
     isNew,
@@ -16,6 +22,12 @@ const ProductCard: FC<ProductCardProps> = ({ product, isPriceNextToStar = false 
     perStarValues,
     hasOriginalPrice,
   } = useProductCard(product);
+
+  const handleCardClick = () => {
+    if (enableNavigation) {
+      navigate(`/product/${product.id}`);
+    }
+  };
 
   return (
     <div className="group relative">
@@ -52,7 +64,7 @@ const ProductCard: FC<ProductCardProps> = ({ product, isPriceNextToStar = false 
         </div>
 
         {/* Product Image */}
-        <span className="text-6xl">
+        <span className="text-6xl" onClick={handleCardClick}>
           <img
             src={imageSrc}
             alt={product.name}
@@ -62,7 +74,12 @@ const ProductCard: FC<ProductCardProps> = ({ product, isPriceNextToStar = false 
       </div>
 
       {/* Product Info */}
-      <h3 className="font-semibold mb-2">{product.name}</h3>
+      <h3
+        className="font-semibold mb-2 cursor-pointer hover:text-primary transition-colors"
+        onClick={handleCardClick}
+      >
+        {product.name}
+      </h3>
 
       <div
         className={`flex gap-2 ${isPriceNextToStar ? "flex-row items-center" : "flex-col"} mb-2`}

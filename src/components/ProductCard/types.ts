@@ -1,5 +1,5 @@
 export interface Product {
-  id: number;
+  id: number | string;
   name: string;
   price: number;
   originalPrice?: number;
@@ -24,4 +24,5 @@ export interface Product {
 export interface ProductCardProps {
   product: Product;
   isPriceNextToStar?: boolean;
+  enableNavigation?: boolean;
 }

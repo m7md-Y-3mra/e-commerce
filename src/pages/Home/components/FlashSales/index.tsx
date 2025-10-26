@@ -29,7 +29,7 @@ export default function FlashSales({ className = "" }: FlashSalesProps) {
       {/* Products Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {FLASH_SALES_PRODUCTS.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} enableNavigation={false} />
         ))}
       </div>
 
