@@ -1,0 +1,1 @@
+export { withCenteredLayout } from "./withCenteredLayout";
