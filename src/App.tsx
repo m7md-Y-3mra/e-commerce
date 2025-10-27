@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import { TopBanner } from "./components/TopBanner";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
+import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

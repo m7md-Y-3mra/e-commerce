@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import { Button } from "../ui/button";
 import Cart from "./assets/images/cart.svg";
 import Profile from "./assets/images/profile.svg";
@@ -8,9 +9,13 @@ import Navbar from "./components/Navbar";
 import NavIcon from "./components/NavIcon";
 import { NavIconWithBadge } from "./components/NavIconWithBadge";
 import SearchBar from "./components/SearchBar";
+import { useCartContext } from "@/contexts/CartContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const { getItemCount } = useCartContext();
+  const cartItemCount = getItemCount();
 
   return (
     <header className="border-b sticky top-0 bg-white z-50">
@@ -31,9 +36,11 @@ const Header = () => {
             <NavIconWithBadge count={2}>
               <img src={Wishlist} alt="wishlist-icon" />
             </NavIconWithBadge>
-            <NavIconWithBadge count={2}>
-              <img src={Cart} alt="cart-icon" />
-            </NavIconWithBadge>
+            <div onClick={() => navigate("/cart")} className="cursor-pointer">
+              <NavIconWithBadge count={cartItemCount}>
+                <img src={Cart} alt="cart-icon" />
+              </NavIconWithBadge>
+            </div>
             <NavIcon>
               <img src={Profile} alt="profile-icon" />
             </NavIcon>
