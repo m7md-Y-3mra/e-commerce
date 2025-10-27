@@ -1,10 +1,12 @@
 import { Eye, Heart } from "lucide-react";
 import { type FC } from "react";
 import { useNavigate } from "react-router";
+import { toast } from "sonner";
 import StarIcon from "../StarIcon";
 import { Button } from "../ui/button";
 import type { ProductCardProps } from "./types";
 import { useProductCard } from "./useProductCard";
+import { useCartContext } from "@/contexts/CartContext";
 
 const ProductCard: FC<ProductCardProps> = ({
   product,
@@ -12,6 +14,7 @@ const ProductCard: FC<ProductCardProps> = ({
   enableNavigation = true,
 }) => {
   const navigate = useNavigate();
+  const { addItem } = useCartContext();
   const {
     discount,
     isNew,
@@ -27,6 +30,19 @@ const ProductCard: FC<ProductCardProps> = ({
     if (enableNavigation) {
       navigate(`/product/${product.id}`);
     }
+  };
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    addItem({
+      id: String(product.id),
+      name: product.name,
+      price: product.price,
+      quantity: 1,
+      image: imageSrc,
+      color: activeColor,
+    });
+    toast.success(`${product.name} added to cart!`);
   };
 
   return (
@@ -58,7 +74,10 @@ const ProductCard: FC<ProductCardProps> = ({
 
         {/* Add to Cart Button */}
         <div className="absolute z-10 inset-x-0 bottom-0 translate-y-full transition-transform group-hover:translate-y-0">
-          <Button className="w-full rounded-none rounded-b-lg bg-black hover:bg-black hover:opacity-80">
+          <Button
+            onClick={handleAddToCart}
+            className="w-full rounded-none rounded-b-lg bg-black hover:bg-black hover:opacity-80"
+          >
             Add To Cart
           </Button>
         </div>
