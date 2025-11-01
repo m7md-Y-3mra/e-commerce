@@ -22,11 +22,11 @@ const CartTable: FC<CartTableProps> = ({ items, onRemove, onQuantityChange, clas
   });
 
   return (
-    <div className={cn("rounded-lg border", className)}>
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="w-[40%]">Product</TableHead>
+    <div className={cn("rounded-lg", className)}>
+      <Table className="border-separate border-spacing-y-10 border-spacing-x-px w-full">
+        <TableHeader className="[&_tr]:border-0 shadow-table">
+          <TableRow className="">
+            <TableHead className="w-[40%] px-10 py-6">Product</TableHead>
             <TableHead className="text-center">Price</TableHead>
             <TableHead className="text-center">Quantity</TableHead>
             <TableHead className="text-center">Subtotal</TableHead>
@@ -34,7 +34,7 @@ const CartTable: FC<CartTableProps> = ({ items, onRemove, onQuantityChange, clas
         </TableHeader>
         <TableBody>
           {items.map((item) => (
-            <TableRow key={item.id}>
+            <TableRow key={item.id} className="border-0 shadow-table">
               {/* Product Column */}
               <TableCell>
                 <div className="flex items-center gap-4">

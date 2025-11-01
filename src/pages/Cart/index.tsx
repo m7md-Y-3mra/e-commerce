@@ -1,7 +1,7 @@
 import { type FC } from "react";
 import { cn } from "@/lib/utils";
 import Breadcrumb from "@/components/Breadcrumb";
-import { Button } from "@/components/ui/button";
+import  Button  from "@/components/Button";
 import { useCart } from "./hooks/useCart";
 import type { CartPageProps } from "./types";
 import CartTable from "./components/CartTable";
@@ -44,14 +44,10 @@ const Cart: FC<CartPageProps> = ({ className }) => {
         </div>
 
         {/* Cart Content */}
-        <section className="container mx-auto px-4 pb-12 lg:pb-16">
+        <section className="container mx-auto px-4 ">
           {/* Desktop Table View */}
           <div className="hidden md:block">
-            <CartTable
-              items={cart.items}
-              onRemove={removeItem}
-              onQuantityChange={updateQuantity}
-            />
+            <CartTable items={cart.items} onRemove={removeItem} onQuantityChange={updateQuantity} />
           </div>
 
           {/* Mobile Card View */}
@@ -67,13 +63,15 @@ const Cart: FC<CartPageProps> = ({ className }) => {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row justify-between gap-4 mt-6">
-            <Button variant="outline" onClick={handleReturnToShop}>
-              Return To Shop
-            </Button>
-            <Button variant="outline" onClick={onUpdateCart}>
-              Update Cart
-            </Button>
+          <div className="flex flex-col sm:flex-row justify-between gap-4 translate-y-[-16px]">
+            <Button
+              variant="outline"
+              className="shadow-none rounded-[4px]"
+              onClick={handleReturnToShop}
+              label="Return To Shop"
+            />
+              
+            <Button variant="outline" className="shadow-none rounded-[4px]" onClick={onUpdateCart} label="Update Cart"/>
           </div>
 
           {/* Coupon and Cart Total Section */}

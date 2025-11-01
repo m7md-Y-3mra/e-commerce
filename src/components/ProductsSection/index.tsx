@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import HomeSectionHeader from "../HomeSectionHeader";
 import NavigationArrows from "../NavigationArrows";
 import ProductCard from "../ProductCard";
-import SectionButton from "../SectionButton";
+import Button from "../Button";
 import SectionTitle from "../SectionTitle";
 import type { ProductsSectionProps } from "./types";
 
@@ -26,9 +26,7 @@ const ProductsSection: FC<ProductsSectionProps> = ({
         <div className="flex items-center justify-between mb-8">
           {sectionTitle && <SectionTitle sectionTitle={sectionTitle} />}
           {showNavigationArrows && <NavigationArrows />}
-          {showViewAllButton && !showNavigationArrows && (
-            <SectionButton label={viewAllText} />
-          )}
+          {showViewAllButton && !showNavigationArrows && <Button label={viewAllText} />}
         </div>
       )}
 
@@ -42,7 +40,7 @@ const ProductsSection: FC<ProductsSectionProps> = ({
       {/* View All Button (centered) */}
       {showViewAllButton && showNavigationArrows && (
         <div className="text-center">
-          <SectionButton label={viewAllText} />
+          <Button label={viewAllText} />
         </div>
       )}
     </section>

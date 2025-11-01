@@ -1,6 +1,6 @@
 import HomeSectionHeader from "@/components/HomeSectionHeader";
 import ProductCard from "@/components/ProductCard";
-import SectionButton from "@/components/SectionButton";
+import Button from "@/components/Button";
 import SectionTitle from "@/components/SectionTitle";
 import { BEST_SELLING_PRODUCTS, SECTION_LABEL, SECTION_TITLE, VIEW_ALL_TEXT } from "./constants";
 import type { BestSellingProps } from "./types";
@@ -14,7 +14,7 @@ export default function BestSelling({ className = "" }: BestSellingProps) {
       {/* Title and Button */}
       <div className="flex items-center justify-between mb-8">
         <SectionTitle sectionTitle={SECTION_TITLE} />
-        <SectionButton label={VIEW_ALL_TEXT} />
+        <Button label={VIEW_ALL_TEXT} />
       </div>
 
       {/* Products Grid */}
