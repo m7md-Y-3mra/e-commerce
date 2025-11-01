@@ -119,6 +119,10 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@theme {
+  --shadow-table: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

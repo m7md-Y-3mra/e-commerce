@@ -1,7 +1,7 @@
 import HomeSectionHeader from "@/components/HomeSectionHeader";
 import NavigationArrows from "@/components/NavigationArrows";
 import ProductCard from "@/components/ProductCard";
-import SectionButton from "@/components/SectionButton";
+import Button from "@/components/Button";
 import SectionTitle from "@/components/SectionTitle";
 import Timer from "./components/Timer";
 import { FLASH_SALES_PRODUCTS, SECTION_LABEL, SECTION_TITLE, VIEW_ALL_TEXT } from "./constants";
@@ -35,7 +35,7 @@ export default function FlashSales({ className = "" }: FlashSalesProps) {
 
       {/* View All Button */}
       <div className="text-center">
-        <SectionButton label={VIEW_ALL_TEXT} />
+        <Button label={VIEW_ALL_TEXT} />
       </div>
     </section>
   );

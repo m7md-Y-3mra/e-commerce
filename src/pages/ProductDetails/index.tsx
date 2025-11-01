@@ -5,7 +5,7 @@ import { type FC } from "react";
 import ErrorMessage from "@/components/ErrorMessage";
 import ProductDetailsSkeleton from "@/components/ProductDetailsSkeleton";
 import { withCenteredLayout } from "@/hoc";
-import Breadcrumb from "./components/Breadcrumb";
+import Breadcrumb from "@/components/Breadcrumb";
 import DeliveryInfo from "./components/DeliveryInfo";
 import ImageGallery from "./components/ImageGallery";
 import ProductInfo from "./components/ProductInfo";

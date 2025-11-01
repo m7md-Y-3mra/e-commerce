@@ -1,7 +1,7 @@
 import HomeSectionHeader from "@/components/HomeSectionHeader";
 import NavigationArrows from "@/components/NavigationArrows";
 import ProductCard from "@/components/ProductCard";
-import SectionButton from "@/components/SectionButton";
+import Button from "@/components/Button";
 import SectionTitle from "@/components/SectionTitle";
 import { EXPLORE_PRODUCTS, SECTION_LABEL, SECTION_TITLE, VIEW_ALL_TEXT } from "./constants";
 import type { ExploreProductsProps } from "./types";
@@ -23,13 +23,18 @@ export default function ExploreProducts({ className = "" }: ExploreProductsProps
       {/* Products Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {EXPLORE_PRODUCTS.map((product) => (
-          <ProductCard key={product.id} product={product} isPriceNextToStar={true} enableNavigation={false} />
+          <ProductCard
+            key={product.id}
+            product={product}
+            isPriceNextToStar={true}
+            enableNavigation={false}
+          />
         ))}
       </div>
 
       {/* View All Button */}
       <div className="text-center">
-        <SectionButton label={VIEW_ALL_TEXT} />
+        <Button label={VIEW_ALL_TEXT} />
       </div>
     </section>
   );
